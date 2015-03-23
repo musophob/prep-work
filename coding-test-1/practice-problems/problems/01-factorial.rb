@@ -6,7 +6,27 @@
 # Difficulty: easy.
 
 def factorial(n)
+
+  # if 0, return one. end of story.
+  if n == 0
+    return 1
+  end
+
+  # set a counter to be used for multiplication
+  i = n - 1
+
+  # init factorial as input
+  f = n
+
+  # run multiplication for each number < n and > 1
+  while i > 1
+    f = f * i
+    i = i - 1
+  end
+  return f
 end
+
+puts factorial(3)
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
