@@ -6,6 +6,11 @@
 # Difficulty: easy.
 
 def palindrome?(string)
+  if string.reverse == string
+    return true
+  else
+    return false
+  end
 end
 
 # These are tests to check that your code is working. After writing
