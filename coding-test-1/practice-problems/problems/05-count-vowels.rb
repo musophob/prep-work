@@ -5,8 +5,17 @@
 # Difficulty: easy.
 
 def count_vowels(string)
+  letters = string.split("")
+  i = 0
+  vowels = []
+  while i < letters.length
+    if letters[i] == "a" || letters[i] == "e" || letters[i] == "i" || letters[i] == "o" || letters[i] == "u"
+      vowels.push(letters[i])
+    end
+    i = i + 1
+  end
+  return vowels.length
 end
-
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
