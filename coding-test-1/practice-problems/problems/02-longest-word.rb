@@ -7,7 +7,32 @@
 # Difficulty: easy.
 
 def longest_word(sentence)
+
+  # split up the sentence in a new var
+  words = sentence.split
+
+  # set counter & make a home for our lucky winner
+  i = 0
+  longest = ""
+
+  # loop through each word
+  while i < (words.length)
+
+    # compare the length of each word to the current longest
+    if words[i].length > longest.length
+      # set winner to current word
+      longest = words[i]
+    end
+
+    # rinse, repeat (maybe)
+    i = i + 1
+  end
+
+  # give our lucky winner the keys to his new home
+  return longest
 end
+
+puts longest_word("This is a sentence")
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
