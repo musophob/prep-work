@@ -5,6 +5,19 @@
 # Difficulty: medium.
 
 def nearby_az(string)
+  if string.length > 2
+    i = 0
+    while i < string.length
+      if string[i] == "a"
+        if string[i+1] == "z" || string[i+2] == "z" || string[i+3] == "z"
+          return true
+        end
+      end
+      i = i + 1
+    end
+  else
+    return false
+  end
 end
 
 # These are tests to check that your code is working. After writing
