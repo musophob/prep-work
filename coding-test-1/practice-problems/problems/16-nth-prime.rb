@@ -23,8 +23,18 @@ def is_prime?(number)
 end
 
 def nth_prime(n)
+  might_be_a_prime = 0
+  idx = 0 
+  while idx < n
+    if is_prime?(might_be_a_prime)
+      idx += 1
+    end
+    if idx == n
+      return might_be_a_prime
+    end
+    might_be_a_prime += 1
+  end
 end
-
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
