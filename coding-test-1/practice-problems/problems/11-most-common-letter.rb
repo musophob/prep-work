@@ -5,7 +5,29 @@
 # Difficulty: medium.
 
 def most_common_letter(string)
+  letters = string.split("").sort
+  i = 0
+  winner = "letters[0]"
+  winner_count = 0
+  while i < letters.length
+    i2 = 1
+    count = 1
+    while i2 < letters.length
+      if letters[i+i2] == letters[i]
+        count += 1
+      end
+      i2 += 1
+    end
+    if count > winner_count 
+      winner = letters[i]
+      winner_count = count
+    end
+    i2 = 1
+    i += 1
+  end
+  return [winner, winner_count]
 end
+puts most_common_letter("aacb")
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
