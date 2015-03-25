@@ -13,6 +13,15 @@
 # Difficulty: medium.
 
 def is_prime?(number)
+  prime = true
+  i = number - 1
+  while i > 1
+    if number % i == 0
+      prime = false
+    end
+    i -= 1
+  end
+  return prime
 end
 
 # These are tests to check that your code is working. After writing
