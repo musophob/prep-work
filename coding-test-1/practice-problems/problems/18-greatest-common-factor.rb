@@ -5,6 +5,17 @@
 # Difficulty: medium.
 
 def greatest_common_factor(number1, number2)
+  if number1 >= number2
+    divisor = number1
+  else
+    divisor = number2
+  end
+  while true
+    if (number1 % divisor) == 0 && (number2 % divisor) == 0
+      return divisor
+    end
+    divisor -= 1
+  end
 end
 
 # These are tests to check that your code is working. After writing
