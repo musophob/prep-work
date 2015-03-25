@@ -27,7 +27,6 @@ def most_common_letter(string)
   end
   return [winner, winner_count]
 end
-puts most_common_letter("aacb")
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
