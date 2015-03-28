@@ -24,8 +24,20 @@
 # information, we would not give it to you on the timed challenge. :-)
 
 def caesar_cipher(offset, string)
+  letters = string.split("")
+  idx = 0
+  while idx < letters.length
+    if letters[idx] != " "
+      letters[idx] = letters[idx].ord + offset
+      if letters[idx] > 122
+        letters[idx] = letters[idx] % 122 + 96
+      end
+      letters[idx] = letters[idx].chr
+    end
+    idx += 1
+  end
+  return letters.join
 end
-
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
 
